@@ -16,6 +16,8 @@ defmodule GithubRepos.DataCase do
 
   use ExUnit.CaseTemplate
 
+  alias Ecto.Adapters.SQL.Sandbox
+
   using do
     quote do
       alias GithubRepos.Repo
@@ -28,10 +30,10 @@ defmodule GithubRepos.DataCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(GithubRepos.Repo)
+    :ok = Sandbox.checkout(GithubRepos.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(GithubRepos.Repo, {:shared, self()})
+      Sandbox.mode(GithubRepos.Repo, {:shared, self()})
     end
 
     :ok
