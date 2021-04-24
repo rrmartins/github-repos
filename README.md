@@ -1,19 +1,24 @@
 # GithubRepos
 
-To start your Phoenix server:
+[![Language](https://img.shields.io/badge/language-elixir-purple)](https://img.shields.io/badge/language-elixir-purple) [![Platform](https://img.shields.io/badge/platform-api-blueviolet)](https://img.shields.io/badge/platform-api-blueviolet)
+
+## :rocket: Techs
+
+* [Elixir](https://elixir-lang.org/)
+* [Phoenix](https://www.phoenixframework.org/)
+* [Ecto](https://hexdocs.pm/ecto/Ecto.html)
+
+## :wrench: Setup
 
   * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+  * For interactive testing use `iex -S mix`
+  * For create database use `mix ecto.create`
+  * For migrate database use `mix ecto.migrate`
+  * For start phoenix server use `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## :white_check_mark: Test
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+To run tests:
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+* Run with `mix test --cover`
+* Run with `mix coveralls.html` to generate HTML report
